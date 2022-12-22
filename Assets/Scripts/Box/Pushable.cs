@@ -5,11 +5,15 @@ namespace Box
     public class Pushable : MonoBehaviour
     {
         [SerializeField] private LayerMask groundMask;
-        private float groundDetectionDistance = 0.5f;
+
+        private Rigidbody2D rb;
         private Vector3 halfSize;
+        private float groundDetectionDistance = 0.5f;
+        private float fallSpeed = 2.5f;
 
         private void Awake()
         {
+            rb = GetComponent<Rigidbody2D>();
             float xSide = GetComponent<Collider2D>().bounds.extents.x;
             halfSize = new Vector3(xSide, 0f);
         }
@@ -17,7 +21,9 @@ namespace Box
         private void FixedUpdate()
         {
             if (IsGrounded()) return;
-            transform.Translate(2.5f * Time.deltaTime * Vector2.down);
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            //transform.Translate(fallSpeed * Time.deltaTime * Vector2.down);
+            rb.MovePosition(rb.position + Time.deltaTime * fallSpeed * Vector2.down);
         }
 
         private bool IsGrounded()

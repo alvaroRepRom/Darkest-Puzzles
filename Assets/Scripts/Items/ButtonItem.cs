@@ -7,9 +7,10 @@ namespace Items
     public class ButtonItem : MonoBehaviour, IInteractable
     {
         [SerializeField] private List<GameObject> targets;
+        [SerializeField] private bool isHighIntensity;
+        [SerializeField] private bool canBlock;
 
         private Light2D buttonLight;
-        private bool isHighIntensity;
         private float hightIntensity = 0.75f;
         private float lowIntensity = 0.3f;
 
@@ -18,7 +19,10 @@ namespace Items
         {
             ChangeIntensity();
             foreach (GameObject target in targets)
+            {
+                //if (canBlock) target.GetComponent<IBlockChange>()?.BlockChange();
                 target.GetComponent<IOnButtonPushed>()?.Change();
+            }
         }
 
         private void ChangeIntensity()
