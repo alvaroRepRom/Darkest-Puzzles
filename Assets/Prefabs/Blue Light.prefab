@@ -205,7 +205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3006853388944645886}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
@@ -333,3 +333,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteLight: {fileID: 3006853388944645885}
   light2D: {fileID: 3006853388542530080}
+  colorSO: {fileID: 11400000, guid: 16d38ddbc13fe4f448c25cf62c7b9b34, type: 2}

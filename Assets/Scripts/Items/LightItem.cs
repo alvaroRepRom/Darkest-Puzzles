@@ -7,6 +7,13 @@ namespace Items
     {
         [SerializeField] private Light2D spriteLight;
         [SerializeField] private Light2D light2D;
+        [SerializeField] private ColorSO colorSO;
+
+        private void Awake()
+        {
+            spriteLight.color = colorSO.color;
+            light2D.color = colorSO.color;
+        }
 
         public void Change()
         {

@@ -24,7 +24,7 @@ namespace Player
             if (IsGrounded() && Input.GetKey(jumpKey) && !hasJump)
             {
                 hasJump = true;
-                anim.SetTrigger("HasJump");
+                anim.SetTrigger(AnimatorVar.HAS_JUMP);
             }
         }
 
@@ -40,7 +40,7 @@ namespace Player
         private bool IsGrounded()
         {
             bool isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundDetectionDistance, groundMask);
-            anim.SetBool("IsGrounded", isGrounded);
+            anim.SetBool(AnimatorVar.IS_GROUNDED, isGrounded);
             return isGrounded;
         }
     }

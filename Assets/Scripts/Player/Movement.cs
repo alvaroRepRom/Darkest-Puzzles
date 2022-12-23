@@ -24,7 +24,7 @@ namespace Player
         {
             horizontal = Input.GetAxis(HORIZONTAL);
             transform.Translate(Time.deltaTime * horizontal * speed * Vector2.right);
-            anim.SetBool("IsWalking", horizontal != 0f);
+            anim.SetBool(AnimatorVar.IS_WALKING, horizontal != 0f);
             Flip();
         }
 

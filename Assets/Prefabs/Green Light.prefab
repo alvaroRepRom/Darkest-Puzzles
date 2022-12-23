@@ -333,3 +333,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteLight: {fileID: 8931881929491409496}
   light2D: {fileID: 8931881929094506117}
+  colorSO: {fileID: 11400000, guid: f14115e7bee653344bf62e5549fcaf6a, type: 2}

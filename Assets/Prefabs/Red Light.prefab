@@ -223,6 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteLight: {fileID: 4714732081034353434}
   light2D: {fileID: 4714732081438562247}
+  colorSO: {fileID: 11400000, guid: 0cd30fdabca998245ab44b090456b02f, type: 2}
 --- !u!1 &4714732081438562245
 GameObject:
   m_ObjectHideFlags: 0

@@ -1899,18 +1899,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Light
       objectReference: {fileID: 0}
-    - target: {fileID: 4714732081034353434, guid: 6c20cb65da4679041ad2e233b8b6d24c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4714732081438562247, guid: 6c20cb65da4679041ad2e233b8b6d24c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4714732081438562247, guid: 6c20cb65da4679041ad2e233b8b6d24c, type: 3}
-      propertyPath: m_LightVolumeIntensityEnabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c20cb65da4679041ad2e233b8b6d24c, type: 3}
 --- !u!1 &5386191384389569801 stripped
@@ -1925,14 +1913,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3006853388542530080, guid: 3fa964991b0d98743b7c758e139892f7, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006853388542530080, guid: 3fa964991b0d98743b7c758e139892f7, type: 3}
-      propertyPath: m_LightVolumeIntensityEnabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3006853388944645875, guid: 3fa964991b0d98743b7c758e139892f7, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -1976,10 +1956,6 @@ PrefabInstance:
     - target: {fileID: 3006853388944645875, guid: 3fa964991b0d98743b7c758e139892f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006853388944645885, guid: 3fa964991b0d98743b7c758e139892f7, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3006853388944645886, guid: 3fa964991b0d98743b7c758e139892f7, type: 3}
       propertyPath: m_Name
@@ -2132,14 +2108,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8931881929094506117, guid: f6f1beb428c548147aca344cbe129852, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8931881929094506117, guid: f6f1beb428c548147aca344cbe129852, type: 3}
-      propertyPath: m_LightVolumeIntensityEnabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8931881929491409494, guid: f6f1beb428c548147aca344cbe129852, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2183,10 +2151,6 @@ PrefabInstance:
     - target: {fileID: 8931881929491409494, guid: f6f1beb428c548147aca344cbe129852, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8931881929491409496, guid: f6f1beb428c548147aca344cbe129852, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8931881929491409499, guid: f6f1beb428c548147aca344cbe129852, type: 3}
       propertyPath: m_Name

@@ -1,4 +1,5 @@
 using UnityEngine;
+using ARR;
 
 namespace Player
 {
@@ -25,6 +26,7 @@ namespace Player
             if (IsOnStairs())
             {
                 rb.gravityScale = 0f;
+                rb.VelY(0f);
                 anim.speed = 0;
                 if (vertical != 0f)
                 {
@@ -49,7 +51,7 @@ namespace Player
         private void IsClimbing(bool isClimbing)
         {
             anim.speed = 1;
-            anim.SetBool("IsClimbing", isClimbing);
+            anim.SetBool(AnimatorVar.IS_CLIMBING, isClimbing);
         }
     }
 }
