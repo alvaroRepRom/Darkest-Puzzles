@@ -2,19 +2,17 @@ using UnityEngine;
 
 namespace Items
 {
-    public class ApparitionItem : MonoBehaviour, IOnButtonPushed, IBlockChange
+    public class ApparitionItem : MonoBehaviour, IChangeOnScene
     {
         [SerializeField] private bool isBlocked;
 
-        public void BlockChange()
+        public void Change(bool canBlock)
         {
-            isBlocked = !isBlocked;
+            if (isBlocked && !canBlock) return;
+            if (canBlock) isBlocked = !isBlocked;
+            else ObjectActivation();
         }
 
-        public void Change()
-        {
-            if (isBlocked) return;
-            gameObject.SetActive(!gameObject.activeSelf);
-        }
+        private void ObjectActivation() => gameObject.SetActive(!gameObject.activeSelf);
     }
 }

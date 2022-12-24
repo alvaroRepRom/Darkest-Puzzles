@@ -3,7 +3,7 @@ using UnityEngine.Rendering.Universal;
 
 namespace Items
 {
-    public class LightItem : MonoBehaviour, IOnButtonPushed
+    public class LightItem : MonoBehaviour, IChangeOnScene
     {
         [SerializeField] private Light2D spriteLight;
         [SerializeField] private Light2D light2D;
@@ -15,10 +15,12 @@ namespace Items
             light2D.color = colorSO.color;
         }
 
-        public void Change()
+        private void SwitchLights()
         {
             spriteLight.enabled = !spriteLight.enabled;
             light2D.enabled = !light2D.enabled;
         }
+
+        public void Change(bool canBlock) => SwitchLights();
     }
 }

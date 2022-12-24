@@ -4,28 +4,30 @@ namespace Player
 {
     public class Movement : MonoBehaviour
     {
-        [SerializeField] private float speed = 3f;
+        [SerializeField] private float moveSpeed = 3f;
+        [Header("Pushing")]
+        [SerializeField] private float pushingSpeed = 1.5f;
+        [SerializeField] private LayerMask pushableMask;
 
-        private Rigidbody2D rb;
         private Animator anim;
         private SpriteRenderer sprite;
         private float horizontal;
+        private const float pushingRayDistance = 0.5f;
 
         private const string HORIZONTAL = "Horizontal";
 
         private void Awake()
         {
-            rb = GetComponent<Rigidbody2D>();
             anim = GetComponent<Animator>();
             sprite = GetComponent<SpriteRenderer>();
         }
 
         private void Update()
         {
-            horizontal = Input.GetAxis(HORIZONTAL);
-            transform.Translate(Time.deltaTime * horizontal * speed * Vector2.right);
-            anim.SetBool(AnimatorVar.IS_WALKING, horizontal != 0f);
+            horizontal = Input.GetAxisRaw(HORIZONTAL);
             Flip();
+            anim.SetBool(AnimatorVar.IS_WALKING, horizontal != 0f);
+            transform.Translate(Time.deltaTime * horizontal * Speed() * Vector2.right);
         }
 
         private void Flip()
@@ -35,6 +37,12 @@ namespace Player
             else
             if (horizontal > 0f)
                 sprite.flipX = false;
+        }
+
+        private float Speed()
+        {
+            bool isPushing = Physics2D.Raycast(transform.position, new Vector2(horizontal, 0f), pushingRayDistance, pushableMask);
+            return isPushing ? pushingSpeed : moveSpeed;
         }
     }
 }

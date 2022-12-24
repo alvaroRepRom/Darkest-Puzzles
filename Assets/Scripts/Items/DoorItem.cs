@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Items
 {
-    public class DoorItem : MonoBehaviour, IOnButtonPushed, IBlockChange
+    public class DoorItem : MonoBehaviour, IChangeOnScene
     {
         [SerializeField] private Sprite openDoor;
         [SerializeField] private Sprite closeDoor;
@@ -18,12 +18,6 @@ namespace Items
             col = GetComponent<Collider2D>();
         }
 
-        public void Change()
-        {
-            if (isBlocked) return;
-            ChangeDoor();
-        }
-
         private void ChangeDoor()
         {
             isOpen = !isOpen;
@@ -31,9 +25,11 @@ namespace Items
             spriteRenderer.sprite = isOpen ? openDoor : closeDoor;
         }
 
-        public void BlockChange()
+        public void Change(bool canBlock)
         {
-            isBlocked = !isBlocked;
+            if (isBlocked && !canBlock) return;
+            if (canBlock) isBlocked = !isBlocked;
+            else ChangeDoor();
         }
     }
 }

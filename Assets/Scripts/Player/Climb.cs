@@ -1,5 +1,5 @@
 using UnityEngine;
-using ARR;
+using ARR.rigidbody;
 
 namespace Player
 {
@@ -10,7 +10,7 @@ namespace Player
 
         private Rigidbody2D rb;
         private Animator anim;
-        private Vector3 halfSide = new Vector3(0.3f, 0);
+        private Vector3 halfSide = new(0.3f, 0);
 
         private const string VERTICAL = "Vertical";
 

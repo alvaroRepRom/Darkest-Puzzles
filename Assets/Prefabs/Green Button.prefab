@@ -193,5 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e78075ab20977f48b49df034639991d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets:
+  lightObjs:
   - {fileID: 0}
+  - {fileID: 0}
+  canBlock: 0

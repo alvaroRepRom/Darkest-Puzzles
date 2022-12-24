@@ -307,7 +307,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0a36930b7df53e40911f59709166010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  moveSpeed: 3
+  pushingSpeed: 1.5
+  pushableMask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!50 &259086586
 Rigidbody2D:
   serializedVersion: 4
@@ -323,7 +327,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -545,7 +549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 259086582}
   dumping: 0.8
-  xOffset: 5
+  xOffset: 0
   yOffset: 0
 --- !u!114 &519420034
 MonoBehaviour:
@@ -1783,15 +1787,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5818422267297057681, guid: 788a6a87a26e31542b01a6eeaf9de17a, type: 3}
-      propertyPath: targets.Array.size
+      propertyPath: lightObjs.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5818422267297057681, guid: 788a6a87a26e31542b01a6eeaf9de17a, type: 3}
-      propertyPath: targets.Array.data[0]
+      propertyPath: lightObjs.Array.data[0]
       value: 
       objectReference: {fileID: 5386191384389569801}
     - target: {fileID: 5818422267297057681, guid: 788a6a87a26e31542b01a6eeaf9de17a, type: 3}
-      propertyPath: targets.Array.data[1]
+      propertyPath: lightObjs.Array.data[1]
       value: 
       objectReference: {fileID: 749896819}
     - target: {fileID: 5818422267297057682, guid: 788a6a87a26e31542b01a6eeaf9de17a, type: 3}
@@ -1800,11 +1804,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5818422267297057682, guid: 788a6a87a26e31542b01a6eeaf9de17a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.7
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 5818422267297057682, guid: 788a6a87a26e31542b01a6eeaf9de17a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.53
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5818422267297057682, guid: 788a6a87a26e31542b01a6eeaf9de17a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1975,20 +1979,20 @@ PrefabInstance:
       value: Red Button
       objectReference: {fileID: 0}
     - target: {fileID: 7669296644110922473, guid: f5f6e2b9b4bb4f741932cf16ab88e5c8, type: 3}
-      propertyPath: targets.Array.data[0]
-      value: 
-      objectReference: {fileID: 749896819}
-    - target: {fileID: 7669296644110922473, guid: f5f6e2b9b4bb4f741932cf16ab88e5c8, type: 3}
-      propertyPath: targets.Array.data[1]
+      propertyPath: lightObjs.Array.data[0]
       value: 
       objectReference: {fileID: 8931881930668852793}
+    - target: {fileID: 7669296644110922473, guid: f5f6e2b9b4bb4f741932cf16ab88e5c8, type: 3}
+      propertyPath: lightObjs.Array.data[1]
+      value: 
+      objectReference: {fileID: 749896819}
     - target: {fileID: 7669296644110922474, guid: f5f6e2b9b4bb4f741932cf16ab88e5c8, type: 3}
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7669296644110922474, guid: f5f6e2b9b4bb4f741932cf16ab88e5c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.527133
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7669296644110922474, guid: f5f6e2b9b4bb4f741932cf16ab88e5c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2025,10 +2029,6 @@ PrefabInstance:
     - target: {fileID: 7669296644110922474, guid: f5f6e2b9b4bb4f741932cf16ab88e5c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7669296644110922475, guid: f5f6e2b9b4bb4f741932cf16ab88e5c8, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f6e2b9b4bb4f741932cf16ab88e5c8, type: 3}
@@ -2088,15 +2088,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8483744483846195062, guid: e37d271307eab694684b1b29fb2ab365, type: 3}
-      propertyPath: targets.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8483744483846195062, guid: e37d271307eab694684b1b29fb2ab365, type: 3}
-      propertyPath: targets.Array.data[0]
+      propertyPath: lightObjs.Array.data[0]
       value: 
       objectReference: {fileID: 643580405}
     - target: {fileID: 8483744483846195062, guid: e37d271307eab694684b1b29fb2ab365, type: 3}
-      propertyPath: targets.Array.data[1]
+      propertyPath: lightObjs.Array.data[1]
       value: 
       objectReference: {fileID: 1659286718}
     m_RemovedComponents: []

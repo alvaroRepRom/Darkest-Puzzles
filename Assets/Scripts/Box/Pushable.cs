@@ -8,8 +8,8 @@ namespace Box
 
         private Rigidbody2D rb;
         private Vector3 halfSize;
-        private float groundDetectionDistance = 0.5f;
-        private float fallSpeed = 2.5f;
+        private const float groundDetectionDistance = 0.5f;
+        private const float fallSpeed = 3f;
 
         private void Awake()
         {
@@ -18,11 +18,10 @@ namespace Box
             halfSize = new Vector3(xSide, 0f);
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             if (IsGrounded()) return;
             rb.velocity = new Vector2(0, rb.velocity.y);
-            //transform.Translate(fallSpeed * Time.deltaTime * Vector2.down);
             rb.MovePosition(rb.position + Time.deltaTime * fallSpeed * Vector2.down);
         }
 
