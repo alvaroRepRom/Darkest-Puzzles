@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ARR.UI
+namespace ARR.UIEX
 {
     public static partial class ExtendedMethods
     {

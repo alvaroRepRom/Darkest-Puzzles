@@ -18,7 +18,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5818422267297057682
 Transform:
@@ -193,5 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e78075ab20977f48b49df034639991d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorSO: {fileID: 11400000, guid: 16d38ddbc13fe4f448c25cf62c7b9b34, type: 2}
   lightObjs: []
   canBlock: 1

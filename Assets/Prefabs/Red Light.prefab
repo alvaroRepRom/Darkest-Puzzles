@@ -18,7 +18,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4714732081034353428
 Transform:
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.42745098, b: 0.42745098, a: 1}
   m_Intensity: 0.58
   m_LightVolumeIntensity: 0.2
-  m_LightVolumeIntensityEnabled: 1
+  m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: ce47f8ae6bdd944419cb61fd69ce3b82, type: 3}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4714732081438562246
 Transform:

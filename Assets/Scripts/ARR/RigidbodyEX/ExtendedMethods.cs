@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ARR.rigidbody
+namespace ARR.RigidbodyEX
 {
     public static partial class ExtendedMethods
     {

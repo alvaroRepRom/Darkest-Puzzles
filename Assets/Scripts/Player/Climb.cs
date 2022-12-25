@@ -1,5 +1,5 @@
 using UnityEngine;
-using ARR.rigidbody;
+using ARR.RigidbodyEX;
 
 namespace Player
 {
