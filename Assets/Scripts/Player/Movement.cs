@@ -24,6 +24,7 @@ namespace Player
 
         private void Update()
         {
+            if (HasDied()) return;
             horizontal = Input.GetAxisRaw(HORIZONTAL);
             Flip();
             Animation();
@@ -46,6 +47,11 @@ namespace Player
         {
             bool isPushing = Physics2D.Raycast(transform.position, new Vector2(horizontal, 0f), pushingRayDistance, pushableMask);
             return isPushing ? pushingSpeed : moveSpeed;
+        }
+
+        private bool HasDied()
+        {
+            return anim.GetCurrentAnimatorStateInfo(0).IsName(AnimatorVar.PLAYER_DEATH);
         }
     }
 }

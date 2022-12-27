@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 5695982874888650409}
   - component: {fileID: 5695982874888650408}
   - component: {fileID: 5695982874888650415}
+  - component: {fileID: -8977016869610977524}
   m_Layer: 9
   m_Name: Alien Blue
   m_TagString: Untagged
@@ -251,3 +252,15 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   onAlertSO: {fileID: 11400000, guid: 4dfd5e68b31ef56498444591be657266, type: 2}
+--- !u!114 &-8977016869610977524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5695982874888650420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef466b8c4440b44d8f241601eedf32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

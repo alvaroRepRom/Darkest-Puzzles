@@ -21,7 +21,8 @@ namespace Player
         }
 
         private void Update()
-        {            
+        {
+            if (HasDied()) return;
             float vertical = Input.GetAxis(VERTICAL);            
             if (IsOnStairs())
             {
@@ -52,6 +53,11 @@ namespace Player
         {
             anim.speed = 1;
             anim.SetBool(AnimatorVar.IS_CLIMBING, isClimbing);
+        }
+
+        private bool HasDied()
+        {
+            return anim.GetCurrentAnimatorStateInfo(0).IsName(AnimatorVar.PLAYER_DEATH);
         }
     }
 }
