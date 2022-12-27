@@ -11,7 +11,7 @@ namespace Stairs
 
         public void CreateStairs()
         {
-            transform.DestroyChildren();
+            transform.DestroyChildrenInmediate();
             for (int i = 0; i < numOfTiles; i++)
             {
                 Vector3 pos = transform.position + Vector3.up * i;

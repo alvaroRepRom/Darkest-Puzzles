@@ -60,7 +60,7 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 0.75
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
@@ -231,28 +231,28 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:
-  - position: {x: 0.5, y: 0.40625, z: 0}
+  - position: {x: 0.25, y: 0.203125, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
     uv: {x: 1, y: 0.90625}
-  - position: {x: 0.375, y: -0.5, z: 0}
+  - position: {x: 0.1875, y: -0.25, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
     uv: {x: 0.875, y: 0}
-  - position: {x: 0.5, y: -0.296875, z: 0}
+  - position: {x: 0.25, y: -0.1484375, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
     uv: {x: 1, y: 0.203125}
-  - position: {x: 0.28125, y: 0.5, z: 0}
+  - position: {x: 0.140625, y: 0.25, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
     uv: {x: 0.78125, y: 1}
-  - position: {x: -0.390625, y: -0.5, z: 0}
+  - position: {x: -0.1953125, y: -0.25, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
     uv: {x: 0.109375, y: 0}
-  - position: {x: -0.46875, y: 0.5, z: 0}
+  - position: {x: -0.234375, y: 0.25, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
     uv: {x: 0.03125, y: 1}
-  - position: {x: -0.5, y: 0.453125, z: 0}
+  - position: {x: -0.25, y: 0.2265625, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
     uv: {x: 0, y: 0.953125}
-  - position: {x: -0.5, y: -0.46875, z: 0}
+  - position: {x: -0.25, y: -0.234375, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
     uv: {x: 0, y: 0.03125}
   - position: {x: 0, y: 0, z: 0}
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Triangles: 070006000400050004000600030004000500010004000300000001000300020001000000
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.5, y: 0.5, z: 0}
+    m_Extent: {x: 0.25, y: 0.25, z: 0}
   m_PointLightInnerAngle: 130.95122
   m_PointLightOuterAngle: 180.36
   m_PointLightInnerRadius: 2

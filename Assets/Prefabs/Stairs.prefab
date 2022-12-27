@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3998313951252627944
 Transform:
@@ -47,7 +47,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 1.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -58,7 +58,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 4}
   m_EdgeRadius: 0
 --- !u!114 &5115771498311565220
 MonoBehaviour:
@@ -87,4 +87,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stairsTile: {fileID: 6599455125442880338, guid: 8deb4de1b2e71ee4db0410a8b008eab2, type: 3}
   endStairsTile: {fileID: 8878819800886018399, guid: 50dd9b13aa291154d946be57b101751d, type: 3}
-  numOfTiles: 1
+  numOfTiles: 4

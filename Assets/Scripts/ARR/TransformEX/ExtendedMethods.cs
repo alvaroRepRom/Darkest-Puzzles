@@ -19,13 +19,22 @@ namespace ARR.TransformEX
             trans.position = new Vector3(x, trans.position.y, trans.position.z);
         }
         /// <summary>
+        /// Destroy all children inmediately. Use it on Edior or with care on Game.
+        /// </summary>
+        public static void DestroyChildrenInmediate(this Transform trans)
+        {
+            int count = trans.childCount;
+            for (int i = 0; i < count; i++)
+                Transform.DestroyImmediate(trans.GetChild(0).gameObject);
+        }
+        /// <summary>
         /// Destroy all children.
         /// </summary>
         public static void DestroyChildren(this Transform trans)
         {
             int count = trans.childCount;
             for (int i = 0; i < count; i++)
-                Transform.DestroyImmediate(trans.GetChild(0).gameObject);
+                Transform.Destroy(trans.GetChild(0).gameObject);
         }
     }
 }

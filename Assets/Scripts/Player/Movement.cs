@@ -26,9 +26,12 @@ namespace Player
         {
             horizontal = Input.GetAxisRaw(HORIZONTAL);
             Flip();
-            anim.SetBool(AnimatorVar.IS_WALKING, horizontal != 0f);
-            transform.Translate(Time.deltaTime * horizontal * Speed() * Vector2.right);
+            Animation();
+            Move();
         }
+
+        private void Move() => transform.Translate(Time.deltaTime * horizontal * Speed() * Vector2.right);
+        private void Animation() => anim.SetBool(AnimatorVar.IS_WALKING, horizontal != 0f);
 
         private void Flip()
         {
