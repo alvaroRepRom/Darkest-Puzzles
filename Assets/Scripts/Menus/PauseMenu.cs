@@ -1,25 +1,36 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour
+namespace Menus
 {
-    [SerializeField] private Button newGameButton;
-    [SerializeField] private Button continueButton;
-
-    private bool isPaused;
-
-    public void PauseGame()
+    public class PauseMenu : MonoBehaviour
     {
-        Time.timeScale = isPaused ? 1 : 0;
-    }
+        [SerializeField] private GameObject pauseMenuCanvas;
 
-    public void ResetLevel()
-    {
-        GameManager.Instance.ResetScene();
-    }
+        private bool isPaused;
 
-    public void ExitGame()
-    {
-        GameManager.Instance.LoadMainMenu();
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                PauseGame();
+        }
+
+        public void PauseGame()
+        {
+            isPaused = !isPaused;
+            Time.timeScale = isPaused ? 0 : 1;
+            pauseMenuCanvas.SetActive(isPaused);
+        }
+
+        public void ResetLevel()
+        {
+            Time.timeScale = 1;
+            GameManager.Instance.ResetScene();
+        }
+
+        public void ExitGame()
+        {
+            Time.timeScale = 1;
+            GameManager.Instance.LoadMainMenu();
+        }
     }
 }

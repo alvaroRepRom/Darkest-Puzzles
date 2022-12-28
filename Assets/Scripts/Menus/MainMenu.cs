@@ -24,5 +24,7 @@ namespace Menus
             c.a = 0.5f;
             text.color = c;
         }
+        public void NewGame() => GameManager.Instance.NextScene();
+        public void ContinueGame() => GameManager.Instance.LoadSaveGame();
     }
 }

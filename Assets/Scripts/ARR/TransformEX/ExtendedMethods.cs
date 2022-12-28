@@ -19,6 +19,13 @@ namespace ARR.TransformEX
             trans.position = new Vector3(x, trans.position.y, trans.position.z);
         }
         /// <summary>
+        /// Change X axis position.
+        /// </summary>
+        public static void InvertScaleX(this Transform trans)
+        {
+            trans.localScale = new(trans.localScale.x * -1, trans.localScale.y, trans.localScale.z);
+        }
+        /// <summary>
         /// Destroy all children inmediately. Use it on Edior or with care on Game.
         /// </summary>
         public static void DestroyChildrenInmediate(this Transform trans)

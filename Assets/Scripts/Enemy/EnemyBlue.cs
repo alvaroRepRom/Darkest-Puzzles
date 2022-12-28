@@ -32,6 +32,8 @@ namespace Enemy
             eyeLight = GetComponentInChildren<Light2D>();
             originalX = transform.position.x;
             startFlipped = spriteRenderer.flipX;
+            if (!startFlipped)
+                eyeLight.transform.Rotate(Vector3.forward * 180);
         }
         
         private void Update()

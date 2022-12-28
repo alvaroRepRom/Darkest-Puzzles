@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     public void LoadMainMenu() { SceneManager.LoadScene(0); }
     private int ActiveScene() { return SceneManager.GetActiveScene().buildIndex; }
     public bool HasSavedData() { return PlayerPrefs.HasKey(SAVE_KEY); }
-    public void ContinueGame()
+    public void LoadSaveGame()
     {
         int level = PlayerPrefs.GetInt(SAVE_KEY);
         SceneManager.LoadScene(level);
