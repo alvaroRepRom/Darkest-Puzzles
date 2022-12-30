@@ -55,10 +55,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _GlowSubstraction: 0.5
+    - _GlowSubstraction: 0.8
     - _IsAlphaComplete: 0
     - _IsColorAlpha: 0
-    - _NoiseScale: 50
+    - _NoiseScale: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
