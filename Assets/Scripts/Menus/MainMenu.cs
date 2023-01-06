@@ -26,5 +26,6 @@ namespace Menus
         }
         public void NewGame() => GameManager.Instance.NextScene();
         public void ContinueGame() => GameManager.Instance.LoadSaveGame();
+        public void QuitGame() => Application.Quit();
     }
 }

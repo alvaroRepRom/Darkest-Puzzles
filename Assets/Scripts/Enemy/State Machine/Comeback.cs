@@ -1,49 +1,51 @@
 using UnityEngine;
-using ARR.TransformEX;
 
-public class Comeback : BaseState
+namespace Enemy.StateMachine
 {
-    public Comeback(EnemyController currentContext, StateFactory states) : base(currentContext, states) { }
-    public override void EnterState()    
-    {        
-        ctx.SpriteRenderer.flipX = !ctx.StartFlipped;
-        ctx.LookDirection = ctx.SpriteRenderer.flipX ? Vector2.left : Vector2.right;
-    }
-
-    public override void ExitState() 
+    public class Comeback : BaseState
     {
-        
-    }
-
-    public override void UpdateState()
-    {
-        LookForTarget();
-        Move();
-        ReturnToPatrolCondition();
-    }
-
-    private void LookForTarget()
-    {
-        Vector3 castPos = ctx.transform.position + ctx.CastRayOffset;
-        RaycastHit2D hit = Physics2D.Raycast(castPos, ctx.LookDirection, ctx.WatchDistance, ctx.PlayerMask);
-        if (hit)
+        public Comeback(EnemyController currentContext, StateFactory states) : base(currentContext, states) { }
+        public override void EnterState()
         {
-            ctx.XTarget = hit.point.x; // Search for last Player seen point
-            SwitchState(ctx.States.SelectState(StateFactory.ALERT));
+            ctx.SpriteRenderer.flipX = !ctx.StartFlipped;
+            ctx.LookDirection = ctx.SpriteRenderer.flipX ? Vector2.left : Vector2.right;
         }
-    }
-    private void Move() => ctx.transform.Translate(Time.deltaTime * ctx.PatrolSpeed * ctx.LookDirection);
 
-    private void ReturnToPatrolCondition()
-    {
-        float distanceBetween = ctx.OriginalX - ctx.transform.position.x;
+        public override void ExitState()
+        {
 
-        if (ctx.SpriteRenderer.flipX) // goes left
-            if (distanceBetween > 0)
-                SwitchState(ctx.States.SelectState(StateFactory.PATROL));
+        }
 
-        if (!ctx.SpriteRenderer.flipX)// goes right
-            if (distanceBetween < 0)
-                SwitchState(ctx.States.SelectState(StateFactory.PATROL));
+        public override void UpdateState()
+        {
+            LookForTarget();
+            Move();
+            ReturnToPatrolCondition();
+        }
+
+        private void LookForTarget()
+        {
+            Vector3 castPos = ctx.transform.position + ctx.CastRayOffset;
+            RaycastHit2D hit = Physics2D.Raycast(castPos, ctx.LookDirection, ctx.WatchDistance, ctx.PlayerMask);
+            if (hit)
+            {
+                ctx.XTarget = hit.point.x; // Search for last Player seen point
+                SwitchState(ctx.States.SelectState(StateFactory.ALERT));
+            }
+        }
+        private void Move() => ctx.transform.Translate(Time.deltaTime * ctx.PatrolSpeed * ctx.LookDirection);
+
+        private void ReturnToPatrolCondition()
+        {
+            float distanceBetween = ctx.OriginalX - ctx.transform.position.x;
+
+            if (ctx.SpriteRenderer.flipX) // goes left
+                if (distanceBetween > 0)
+                    SwitchState(ctx.States.SelectState(StateFactory.PATROL));
+
+            if (!ctx.SpriteRenderer.flipX)// goes right
+                if (distanceBetween < 0)
+                    SwitchState(ctx.States.SelectState(StateFactory.PATROL));
+        }
     }
 }
