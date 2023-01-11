@@ -6,7 +6,7 @@ namespace Player
     {
         private Animator anim;
         private void Awake() => anim = GetComponent<Animator>();
-        public void Damage() => anim.SetTrigger(AnimatorVar.HAS_DIED);
-        public void Reset() => GameManager.Instance.ResetScene();
+        public void Damage() => anim.SetTrigger("HasDied");
+        public void ResetScene() => GameManager.Instance.ResetScene();
     }
 }
