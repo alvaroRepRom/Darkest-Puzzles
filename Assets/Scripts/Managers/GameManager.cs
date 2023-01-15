@@ -12,8 +12,11 @@ public class GameManager : MonoBehaviour
     {
         if (Instance != null)
             Destroy(gameObject);
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void NextScene()

@@ -18,9 +18,12 @@ public class AudioManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         if (Instance != null)
             Destroy(gameObject);
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-        audioSource.Play();
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            audioSource.Play();
+        }
     }
 
     private void ChangeMusic(bool change)
